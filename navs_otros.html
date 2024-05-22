@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <style>
+        #div-1 {
+          bottom: 714px;
+          left: 0;
+          padding-bottom: 0.5rem;
+          padding-left: 1rem;
+          padding-right: 1rem;
+          padding-top: 0.5rem;
+          position: fixed;
+          right: 0;
+          top: 0;
+          width: 100%;
+        }
+        #div-2 {
+          align-items: center;
+          justify-content: space-between;
+          display: flex;
+          max-width: 72rem;
+          margin: auto;
+        }
+        #a-1 {
+          align-items: center;
+          display: flex;
+        }
+        #img-1 {
+          aspect-ratio: auto 48 / 48;
+          cursor: pointer;
+          width: 48px;
+          height: auto;
+          max-width: 100%;
+        }
+        #span-1 {
+          background-clip: text;
+          background-image: linear-gradient(
+            to right,
+            rgb(220, 38, 38),
+            rgb(30, 64, 175)
+          );
+          cursor: pointer;
+          font-size: 24px;
+          font-weight: 500;
+          -webkit-background-clip: text;
+          color: transparent;
+          margin-left: 0.5rem;
+        }
+        #div-3 {
+          align-items: center;
+          column-gap: 32px;
+          padding-top: 0.5rem;
+          display: none;
+        }
+        #a-2 {
+          color: rgb(23, 37, 84);
+          font-size: 18px;
+          display: none;
+        }
+        #a-3 {
+          color: rgb(23, 37, 84);
+          font-size: 18px;
+        }
+        #a-4 {
+          color: rgb(23, 37, 84);
+          font-size: 18px;
+          display: none;
+        }
+        #a-5 {
+          color: rgb(23, 37, 84);
+          font-size: 18px;
+        }
+        #a-6 {
+          color: rgb(23, 37, 84);
+          font-size: 18px;
+        }
+        #button-1 {
+          color: rgb(255, 255, 255);
+          background-image: linear-gradient(
+            to right,
+            rgb(59, 130, 246),
+            rgb(37, 99, 235)
+          );
+          cursor: pointer;
+          font-weight: 700;
+          padding-bottom: 0.5rem;
+          padding-left: 1rem;
+          padding-right: 1rem;
+          padding-top: 0.5rem;
+          text-align: center;
+          width: 152.25px;
+          height: 40px;
+          border-radius: 4px;
+          margin: 0;
+        }
+        @media (min-width: 768px) {
+          #div-3 {
+            display: flex !important;
+          }
+        }
+        @media (min-width: 1024px) {
+          #a-2 {
+            display: block !important;
+          }
+          #a-4 {
+            display: block !important;
+          }
+        }
+        a {
+          text-decoration: none;
+        }
+
+        /* ----------------- OTRA ----------------------------*/
+        @import url(https://fonts.googleapis.com/css?family=Roboto);
+        @import url(//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
+
+        * {
+          font-family: Roboto;
+        }
+
+        body {
+          margin: 0px;
+          padding: 0px;
+        }
+
+        .sidenav {
+          position: absolute;
+          width: 300px;
+          left: -240px;
+          top: 0;
+          bottom: 0;
+          z-index: 1000;
+          background: #212121;
+          box-shadow: 2px 0px 5px #555;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          transition: all 0.3s ease;
+        }
+        .sidenav:hover {
+          left: 0px;
+        }
+        .sidenav:hover ~ .content {
+          background: url("http://turret.in/images/backgrounds/stripe.png"),
+            rgba(0, 0, 0, 0.4);
+        }
+
+        .sidenav .nav:not(:last-child) {
+          cursor: pointer;
+          width: 300px;
+          border-bottom: 1px solid #333;
+          box-shadow: -1px 1px 1px #090909;
+        }
+
+        .sidenav .nav .icon,
+        .sidenav .nav .description {
+          float: right;
+          line-height: 60px;
+          color: #e5e5e5;
+        }
+
+        .sidenav .nav .icon {
+          width: 60px;
+          height: 60px;
+          font-size: 40px;
+          text-align: center;
+
+          transition: all 0.2s ease;
+        }
+        .sidenav .nav.active .icon,
+        .sidenav .nav:hover .icon {
+          color: #ff9800;
+        }
+
+        .sidenav .nav .description {
+          font-size: 20px;
+          padding-right: 10px;
+        }
+
+        .content {
+          position: absolute;
+          height: 100%;
+          left: 60px;
+          right: 0;
+          background: #eceff1;
+
+          transition: all 0.4s ease;
+        }
+      </style>
+      <div id="div-1">
+        <div id="div-2">
+          <a href="https://divmagic.com/es" id="a-1"
+            ><img
+              src="https://public-cdn-a.dvmgc.com/_next/static/media/logo-128x128.c84a39fd.webp"
+              id="img-1"
+            /><span id="span-1">DivMagic</span></a
+          >
+          <div id="div-3">
+            <a
+              href="https://divmagic.com/es?utm_source=divmagic-navbar"
+              id="a-2"
+              >Hogar</a
+            ><a
+              href="https://divmagic.com/es/#features?utm_source=divmagic-navbar"
+              id="a-3"
+              >Características</a
+            ><a
+              href="https://divmagic.com/es/docs?utm_source=divmagic-navbar"
+              id="a-4"
+              >Documentación</a
+            ><a href="https://divmagic.getrewardful.com/signup" id="a-5"
+              >Afiliado</a
+            ><a
+              href="https://divmagic.com/es/studio?utm_source=divmagic-navbar"
+              id="a-6"
+              >Studio</a
+            ><button href="https://divmagic.com/#pricing" id="button-1">
+              Obtener ahora
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <!-- ----------------- OTRA ------------------------------>
+    <div class="sidenav">
+      <div class="nav">
+        <div class="icon fa fa-home"></div>
+        <div class="description">TELOS 2015</div>
+      </div>
+      <div class="nav">
+        <div class="icon fa fa-cog"></div>
+        <div class="description">Discount for Toppers</div>
+      </div>
+      <div class="nav active">
+        <div class="icon fa fa-check-square-o"></div>
+        <div class="description">Registration</div>
+      </div>
+      <div class="nav">
+        <div class="icon fa fa-code"></div>
+        <div class="description">Events</div>
+      </div>
+      <div class="nav">
+        <div class="icon fa fa-list-ul"></div>
+        <div class="description">List of CRs</div>
+      </div>
+      <div class="nav">
+        <div class="icon fa fa-user"></div>
+        <div class="description">TELOS 2014 Toppers</div>
+      </div>
+      <div class="nav">
+        <div class="icon fa fa-phone"></div>
+        <div class="description">Contact Us</div>
+      </div>
+    </div>
+
+    <div class="content">This is the main content.</div>
+  </body>
+</html>
