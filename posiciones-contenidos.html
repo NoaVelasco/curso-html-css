@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+  position: relative;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+}
+
+.bottomright {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  font-size: 18px;
+}
+
+.topleft {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 18px;
+}
+
+img { 
+  width: 100%;
+  height: auto;
+  opacity: 0.3;
+}
+</style>
+</head>
+<body>
+
+<h2>Image Text</h2>
+
+<p>Center text in image:</p>
+
+<div class="container">
+  <img src="static/img/ifrit.png" alt="bichito" width="1000" height="300">
+  <div class="center">¡BICHITO!</div>
+  <h2 class="center">Image Text</h2>
+  <div class="bottomright">pelitos</div>
+  <div class="topleft">pie</div>
+</div>
+
+</body>
+</html>
+
