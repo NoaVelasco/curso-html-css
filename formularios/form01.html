@@ -1,14 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formularios 1</title>
-</head>
-<body>
-    <form action="form01.php" method="post">
+  </head>
+  <body>
+    <div>
+      <form action="#">
+        <p>
+          <label for="txtName">Nombre: </label>
+          <input
+            type="text"
+            id="txtName"
+            name="txtName"
+            placeholder="Pancracio" />
+        </p>
+        <p>
+          <label for="txtEmail">Email: </label>
+          <input type="text" id="txtEmail" name="txtEmail" />
+        </p>
+        <p>
+          <label for="passPass">Contraseña: </label>
+          <input type="password" id="passPass" name="passPass" minlength="8" />
+        </p>
+        <p>
+          <label for="day">Fecha: </label><input type="datetime" id="dtFecha" />
+        </p>
+        <p>
+          <label for="day">Fecha: </label><input type="date" id="dtFecha" />
+          <input type="month" name="dtMes" id="dtMes" />
+        </p>
+        <p>
+          <label for="numbers">Números: </label
+          ><input
+            type="number"
+            id="numbers"
+            min="0"
+            max="100"
+            step="5"
+            value="0" />
+        </p>
 
-        <input type="text" name="nombre" id="txtnombre" value="Manzana">
-    </form>
-</body>
+        <p>
+          <label for="txtRango">Rango: </label>
+          <input
+            type="range"
+            id="txtRango"
+            name="txtRango"
+            min="0"
+            max="100"
+            value="0"
+            step="5" />
+          <label for="txtRango">Rango: </label>
+          <input
+            type="range"
+            id="txtRango"
+            name="txtRango"
+            min="0"
+            max="100"
+            value="0"
+            step="5"
+            oninput="this.rangeNumbers.innerText = this.value" />
+        </p>
+        <input
+          type="range"
+          min="0"
+          max="100"
+          value="50"
+          oninput="document.getElementById('valorMostrado').innerText = this.value" />
+        <span id="valorMostrado">50</span>
+
+        <input
+          type="range"
+          name="parse"
+          id="parse"
+          min="0"
+          max="50"
+          value="25"
+          oninput="x.value=parseInt(this.value)" />
+        <output name="x" id="x"></output>
+        <hr />
+        <p>
+          <input type="checkbox" id="chkAcept1" />
+          <label for="chkAcept1">Aceptar donar tu alma.</label>
+        </p>
+        <p>
+          <input type="checkbox" id="chkAcept2" />
+          <label for="chkAcept2">Aceptar regalar tu iPhone.</label>
+        </p>
+        <p>
+          <input type="checkbox" id="chkAcept3" />
+          <label for="chkAcept3">Aceptar un cólico nocturno.</label>
+        </p>
+        <hr />
+
+        <input type="radio" name="favLeng" id="radioBtn1" value="Python" />
+        <label for="radioBtn1">Python</label>
+        <br />
+
+        <input type="radio" name="favLeng" id="radioBtn2" value="Javascript" />
+        <label for="radioBtn2">Javascript</label>
+        <br />
+
+        <input
+          type="radio"
+          name="favLeng"
+          id="radioBtn3"
+          value="Actionscript" />
+        <label for="radioBtn3">Actionscript de 2001</label>
+        <hr />
+        <input type="submit" value="Enviar" />
+        <hr />
+        <section>
+          <form action="#">
+            <fieldset>
+              <div>
+                <p>
+                  <label for="txtNom">Nombre: </label>
+                  <input type="text" id="txtNom" />
+                </p>
+              </div>
+              <div>
+                <p>
+                  <label for="txtPass">Contraseña: </label>
+                  <input type="password" id="txtPass" />
+                </p>
+                <p><input type="color" name="color" id="coloret"></p>
+              </div>
+              <input type="submit" value="Enviar">
+              <input type="reset" value="Borrar">
+              <p><input type="button" value="Saludo" onclick="alert('Hola, mundo')"></p>
+            </fieldset>
+          </form>
+        </section>
+      </form>
+    </div>
+  </body>
 </html>
