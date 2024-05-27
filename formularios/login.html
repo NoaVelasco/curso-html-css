@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <style>
+      body {
+        font-size: 1.2em;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #654a78;
+      }
+      h1 {
+        text-align: center;
+        color: rgb(249, 245, 255);
+      }
+      .contenedor {
+        margin: 0 auto;
+        width: 300px;
+        padding: 1em;
+        border: 1px solid #ccc;
+        border-radius: 1em;
+        background-color: #b695ce;
+      }
+
+      .form-div {
+        width: 100%;
+      }
+
+      input {
+        font-size: inherit;
+        margin-top: 0.5em;
+        border: none;
+        box-shadow: #654a78 -2px -2px 0px 1px;
+      }
+
+      input[type="submit"] {
+        padding: 8px 16px;
+        border-radius: 10px;
+        cursor: pointer;
+        /* box-shadow: none; */
+        box-shadow: #654a78 2px 2px 1.8px 1.5px;
+      }
+
+      .pie {
+        position: fixed;
+        width: 100%;
+        bottom: 0px;
+        margin: auto;
+        font-size: small;
+        text-align: center;
+        color: #fafafa99;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Login</h1>
+
+      <form>
+        <div class="contenedor">
+          <div class="form-div">
+            <label for="user">Usuario</label><br />
+            <input
+              type="email"
+              name="user"
+              id="user"
+              size="25"
+              placeholder="Introduce tu correo"
+              required />
+          </div>
+          <div style="clear: left"></div>
+          <br />
+          <div class="form-div">
+            <label for="password">Contraseña</label><br />
+            <input
+              type="password"
+              name="password"
+              id="password"
+              size="25"
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}"
+              placeholder="Introduce tu contraseña"
+              required />
+          </div>
+          <div style="clear: left"></div>
+          <br />
+          <div>
+            <input
+              type="submit"
+              value="Enviar" />
+          </div>
+        </div>
+      </form>
+    </main>
+    <footer>
+      <div class="pie">
+          <p>
+            © 2024, noave - Todos los derechos reservados.
+            <br />
+            Política de privacidad - Política de cookies - Aviso Legal
+          </p>
+      </div>
+    </footer>
+  </body>
+</html>
