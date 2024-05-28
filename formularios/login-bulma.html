@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css" />
+    <style>
+      /* html {
+        height: 100%;
+      } */
+      /* body {
+        height: 100%;
+        margin: 0;
+        font-size: 1.2em;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #654a78;
+        background-image: linear-gradient( #654a78, #b695ce);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+
+      } */
+      /* h1 {
+        text-align: center;
+        color: rgb(249, 245, 255);
+      } */
+      .contenedor {
+        margin: 0 auto;
+        width: 300px;
+        padding: 1em;
+        border: 1px solid #ccc;
+        border-radius: 1em;
+        background-color: #b695ce;
+      }
+
+      .form-div {
+        width: 100%;
+      }
+
+      /* input,
+      textarea {
+        font-size: inherit;
+        margin-top: 0.5em;
+        border: none;
+        width: 98%;
+        resize: vertical;
+        box-shadow: #654a78 -2px -2px 0px 1px;
+      }
+
+      input[type="submit"] {
+        padding: 8px 16px;
+        border-radius: 10px;
+        cursor: pointer;
+        width: auto;
+        box-shadow: #654a78 2px 2px 1.8px 1.5px;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #654a78;
+        color: #fafafa;
+      } */
+
+      .pie {
+        position: fixed;
+        width: 100%;
+        bottom: 0px;
+        margin: auto;
+        font-size: small;
+        text-align: center;
+        color: #fafafa99;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="box">
+        <div class="field">
+          <label class="label">Name</label>
+          <div class="control">
+            <input
+              class="input"
+              type="text"
+              placeholder="Text input" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Username</label>
+          <div class="control has-icons-left has-icons-right">
+            <input
+              class="input is-success"
+              type="text"
+              placeholder="Text input"
+              value="bulma" />
+            <span class="icon is-small is-left">
+              <i class="fas fa-user"></i>
+            </span>
+            <span class="icon is-small is-right">
+              <i class="fas fa-check"></i>
+            </span>
+          </div>
+          <p class="help is-success">This username is available</p>
+        </div>
+
+        <div class="field">
+          <label class="label">Email</label>
+          <div class="control has-icons-left has-icons-right">
+            <input
+              class="input is-danger"
+              type="email"
+              placeholder="Email input"
+              value="hello@" />
+            <span class="icon is-small is-left">
+              <i class="fas fa-envelope"></i>
+            </span>
+            <span class="icon is-small is-right">
+              <i class="fas fa-exclamation-triangle"></i>
+            </span>
+          </div>
+          <p class="help is-danger">This email is invalid</p>
+        </div>
+
+        <div class="field">
+          <label class="label">Subject</label>
+          <div class="select is-primary">
+            <div class="select">
+              <select>
+                <option>Select dropdown</option>
+                <option>With options</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Message</label>
+          <div class="control">
+            <textarea
+              class="textarea"
+              placeholder="Textarea"></textarea>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="control">
+            <label class="checkbox">
+              <input type="checkbox" />
+              I agree to the <a href="#">terms and conditions</a>
+            </label>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="control">
+            <label class="radio">
+              <input
+                type="radio"
+                name="question" />
+              Yes
+            </label>
+            <label class="radio">
+              <input
+                type="radio"
+                name="question" />
+              No
+            </label>
+          </div>
+        </div>
+
+        <div class="field is-grouped">
+          <div class="control">
+            <button class="button is-link">Submit</button>
+          </div>
+          <div class="control">
+            <button class="button is-link is-light">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="pie">
+        <p>
+          © 2024, noave - Todos los derechos reservados.
+          <br />
+          Política de privacidad - Política de cookies - Aviso Legal
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
