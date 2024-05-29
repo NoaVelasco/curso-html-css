@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Hoy me siento Flex</title>
+    <style>
+      .body {
+        box-sizing: content-box;
+      }
+
+      .fila {
+        display: flex;
+        flex-direction: row;
+      }
+      .columna {
+        display: flex;
+        flex-direction: column;
+        flex: 25%;
+        /* background-color: lightgreen; */
+        border: 4px solid rgb(12, 29, 112);
+        margin: 5px;
+      }
+
+      .interno {
+        /* width: 100%; */
+        height: 50px;
+        background-color: rgb(14, 207, 191);
+        border: 2px solid rgb(8, 105, 60);
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fila">
+      <div class="columna">
+        <div class="interno">1a</div>
+        <div class="interno">2a</div>
+        <div class="interno">3a</div>
+        <div class="interno">4a</div>
+        <div class="interno">5a</div>
+      </div>
+
+      <div class="columna">
+        <div class="interno">1b</div>
+        <div class="interno">2b</div>
+        <div class="interno">3b</div>
+        <div class="interno">4b</div>
+        <div class="interno">5b</div>
+      </div>
+      <div class="columna">
+        <div class="interno">1c</div>
+        <div class="interno">2c</div>
+        <div class="interno">3c</div>
+        <div class="interno">4c</div>
+        <div class="interno">5c</div>
+      </div>
+      <div class="columna">
+        <div class="interno">1d</div>
+        <div class="interno">2d</div>
+        <div class="interno">3d</div>
+        <div class="interno">4d</div>
+        <div class="interno">5d</div>
+      </div>
+    </div>
+  </body>
+</html>
