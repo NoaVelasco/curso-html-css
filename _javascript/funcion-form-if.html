@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Función que pasa por parámetro un valor
+    y comprueba si es mayor de edad. -->
+    <script>
+      function compruebaEdad(edad) {
+        console.log(edad);
+        let txtValidacion = document.getElementById("validacion");
+        if (edad < 18) {
+          txtValidacion.innerHTML = "No puedes acceder al evento";
+          console.warn(
+            "%cNo puedes acceder al evento.",
+            "color: red; font-size: 30px;"
+          );
+        } else {
+          txtValidacion.innerHTML = "Puedes acceder al evento";
+          console.info("%cPuedes acceder al evento.", "color: aquamarine;");
+        }
+        // textContent pinta de forma similar a innerHTML
+        document.getElementById(
+          "validacion2"
+        ).textContent = `porque tienes ${edad} años.`;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>¿Eres mayor de edad?</h1>
+    <!-- Formulario que recoge el valor de la edad y la pasa a la función
+    para mostrar el resultado de su comprobación. -->
+    <form action="#" method="get" onsubmit="compruebaEdad(document.getElementById('intEdad').value)" >
+    <fieldset>
+      <h3>Venta de entradas</h3>
+      <label for="intEdad">Edad:</label>
+      <input
+        type="text"
+        id="intEdad" 
+        pattern="[1-9]|[1-9][0-9]|1[0-1][0-9]"
+        required
+        />
+      <!-- <button onclick="compruebaEdad(document.getElementById('intEdad').value)"> -->
+      <button>
+        Validar
+      </button>
+      <h3 id="validacion"></h3>
+      <p id="validacion2"></p>
+    </fieldset>
+    </form>
+  </body>
+</html>

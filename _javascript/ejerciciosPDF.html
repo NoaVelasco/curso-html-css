@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Saludo</legend>
+      <div>
+        <p><label for="txtNombre">Nombre: </label>
+            <input
+              type="text"
+              id="txtNombre" />
+            <br />
+        </p>
+        <button onclick="saludar()">Saludar</button>
+        <p id="respNombre"></p>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Area</legend>
+      <div>
+        <p><label for="txtBase">Base: </label>
+            <input
+            type="text"
+            id="txtBase" />
+        </p>
+        <p>
+            <label for="txtAltura">Altura: </label>
+            <input
+              type="text"
+              id="txtAltura" />
+        </p>
+
+        <button onclick="calcularArea()">Calcular</button>
+        <p id="respArea"></p>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Números</legend>
+      <div>
+        <p>
+            <label for="intNumber1">Número 1: </label
+            ><input
+              type="number"
+              id="intNumber1" />
+        </p>
+        <p>
+            <label for="intNumber2">Número 2: </label
+            ><input
+              type="number"
+              id="intNumber2" />
+        </p>
+        <button onclick="cambiaValor()">Mostrar</button>
+        <p id="respNumbers"></p>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Tickets</legend>
+      <div>
+        <p>
+            <label for="intKm">Kilómetros de trayecto: </label
+            ><input type="number" id="intKm" />
+        </p>
+        
+        <p>
+            <label for="txtDia"
+              >Laborable o Festivo: </label
+            ><input type="text" id="txtDia" />
+        </p>
+        <button onclick="calcularTicket()">Calcular precio</button>
+        <p id="respTicket"></p>
+      </div>
+    </fieldset>
+    <fieldset>
+        <legend>Pensión</legend>
+        <p><label for="intSueldo">Sueldo: </label><input type="number" id="intSueldo"></p>
+        <button onclick="calcularPension()">Calcular Pensión</button>
+        <p id="respPension"></p>
+    </fieldset>
+
+    <fieldset>
+        <legend>Descuento por venta</legend>
+        <p><label for="intVenta">Venta: </label><input type="number" id="intVenta"></p>
+        <button onclick="calcularVenta()">Calcular descuento</button>
+        <p id="respVenta"></p>
+    </fieldset>
+
+    <fieldset>
+        <legend>¿Es múltiplo de 5?</legend>
+        <p><label for="intMultip">Introduce un número: </label><input type="number" id="intMultip"></p>
+        <button onclick="esMultiplo()">Comprobar</button>
+        <p id="respMultiplo"></p>
+    </fieldset>
+    <script src="static/js/ejerciciosPDF.js"></script>
+  </body>
+</html>
