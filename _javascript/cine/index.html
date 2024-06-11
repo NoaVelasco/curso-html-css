@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Tardes de cine</title>
+    <script src="js/javascript.js"></script>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet" />
+
+    <style>
+      .source-sans-3 {
+        font-family: "Source Sans 3", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+      }
+
+      .arvo-regular {
+        font-family: "Arvo", serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .arvo-bold {
+        font-family: "Arvo", serif;
+        font-weight: 700;
+        font-style: normal;
+      }
+
+      .arvo-regular-italic {
+        font-family: "Arvo", serif;
+        font-weight: 400;
+        font-style: italic;
+      }
+
+      .arvo-bold-italic {
+        font-family: "Arvo", serif;
+        font-weight: 700;
+        font-style: italic;
+      }
+
+      body {
+        font-family: "Arvo", sans-serif;
+        background-color: rgb(58, 16, 88);
+        color: hotpink;
+        text-align: center;
+      }
+      div {
+        margin: 50px auto;
+        padding: 4px, auto;
+        width: 400px;
+      }
+      fieldset {
+        width: 400px;
+        margin: auto;
+        background-color: indigo;
+        border: 1px solid hotpink;
+        padding: 1em;
+        border-radius: 1em;
+      }
+      label {
+        font-family: "Source Sans 3", sans-serif;
+      }
+      select, input {
+        color: #000000;
+        font-family: "Source Sans 3", sans-serif;
+        margin-left: 0.5em;
+      }
+      select:invalid {
+        color: #999999;
+      }
+      #recomendacion {
+        font-family: "arvo", serif;
+        font-size: 1.5em;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1 class="source-sans-3">¡Tardes de cine!</h1>
+      <div>
+        <p>
+          Para que tu experiencia sea más placentera, escribe tu edad y pulsa el
+          género que quieras.
+        </p>
+        </div> <div>
+        <p>¡Te recomendaremos tu película ideal!</p>
+      </div>
+    </div>
+
+    <form action="#">
+      <fieldset>
+        <label for="intEdad">Edad: </label>
+        <input
+          type="text"
+          size="4"
+          name="intEdad"
+          id="intEdad"
+          pattern="[1-9]|[1-9][0-9]|1[0-1][0-9]"
+          onchange="recomendar()"
+          required />
+        <select
+          id="genero"
+          name="genero"
+          required
+          onchange="recomendar()">
+          <option
+            value=""
+            selected
+            disabled
+            hidden>
+            --Selecciona género--
+          </option>
+          <option value="drama">Drama</option>
+          <option value="comedia">Comedia</option>
+          <option value="musical">Musical</option>
+          <option value="crimen">Crimen</option>
+        </select>
+        <div id="recomendacion">Nuestra sugerencia es...</div>
+      </fieldset>
+    </form>
+
+  
+
+  </body>
+</html>
