@@ -6,30 +6,29 @@ body {
   background-color: rgb(199, 220, 220);
   margin: 2em auto;
   width: 700px;
-  height: 300px;
+  height: 280px;
   display: grid;
   gap: 0.6rem;
-  /* grid-auto-flow: dense; */
-  /* grid-template-columns: repeat(12, 1fr); */
-  grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 2fr 2fr;
   grid-template-areas:
-    "area-1 area-1 area-1 area-1 area-1 area-1 area-1"
-    "area-2 area-2 area-3 area-3 area-5 area-5 area-5"
-    "area-2 area-2 area-3 area-3 area-5 area-5 area-5"
-    "area-2 area-2 area-4 area-4 area-5 area-5 area-5"
-    "area-2 area-2 area-4 area-4 area-5 area-5 area-5";
-  /* grid-template-rows: repeat(auto-fit, minmax(1fr, 12fr)); */
+    "area-1 area-1 area-1"
+    "area-2 area-3 area-5"
+    "area-2 area-4 area-5";
 }
 
-.container-2 {
+.container-sec {
   background-color: rgb(199, 220, 220);
+  margin: 2em auto;
+  width: 700px;
+  /* height: 280px; */
   display: grid;
   gap: 0.6rem;
-  grid-template-columns: repeat(12, 1fr);
-  /* grid-template-rows: repeat(auto-fit, minmax(1fr, 12fr)); */
-  /* grid-auto-rows: 1fr; */
-  /* grid-auto-flow: column dense; */
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, minmax(200px, 1fr));
+  grid-template-areas:
+    "area-sec-1 area-sec-5 area-sec-2"
+    "area-sec-3 area-sec-5 area-sec-4";
 }
 
 .grid-item {
@@ -37,49 +36,149 @@ body {
   border-radius: 0.5rem;
 }
 
-.area-1 {
+
+/* grid area miembro focus */
+.area-nombre {
   grid-area: area-1;
-  /* height: 50px; */
 }
 
-.area-2 {
+.area-foto {
   grid-area: area-2;
 }
 
-.area-3 {
+.area-nac {
   grid-area: area-3;
 }
 
-.area-4 {
+.area-def {
   grid-area: area-4;
 }
 
-.area-5 {
+.area-info {
   grid-area: area-5;
 }
 
-
-
-
-
-.it-1 {
-  grid-column: span 12;
+/* grid area relaciones */
+.area-sec-pat {
+  grid-area: area-sec-1;
 }
 
-.it-2 {
-  grid-column: span 4;
-  grid-row: span 4;
+.area-sec-herm {
+  grid-area: area-sec-2;
 }
 
-.it-3-4 {
-  grid-column: span 3;
-  grid-row: span 2;
-  grid-column-end: 8;
+.area-sec-par {
+  grid-area: area-sec-3;
 }
 
-.it-5 {
-  grid-column: span 5;
-  grid-row: span 4;
-  /* grid-row-end: 6;  */
-/* grid-column-end: -1; */
+.area-sec-hij {
+  grid-area: area-sec-4;
+}
+
+.area-sec-sep {
+  grid-area: area-sec-5;
+}
+
+.container-wid {
+  background-color: rgb(199, 220, 220);
+  margin: 2em auto;
+  width: 700px;
+  height: 250px;
+  display: grid;
+  gap: 0.6rem;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 1fr 3fr 3fr;
+  grid-template-areas:
+    "area-1 area-1 area-1 area-1 area-1 area-1 area-1"
+    "area-2 area-2 area-3 area-3 area-5 area-5 area-5"
+    "area-2 area-2 area-4 area-4 area-5 area-5 area-5";
+}
+
+@media screen and (min-width: 1000px) {
+  .container {
+    background-color: rgb(199, 220, 220);
+    margin: 2em auto;
+    width: 960px;
+    height: 200px;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 3fr;
+    grid-template-areas:
+      "area-2 area-1 area-1 area-5"
+      "area-2 area-3 area-4 area-5";
+  }
+
+  .container-sec {
+    background-color: rgb(199, 220, 220);
+    margin: 2em auto;
+    width: 960px;
+    height: 200px;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "area-sec-1 area-sec-2 area-sec-3 area-sec-4";
+  }
+
+  .area-sec-sep {
+    position: fixed;
+    visibility: hidden;
+  }
+
+  .container-wid {
+    background-color: rgb(199, 220, 220);
+    margin: 2em auto;
+    width: 1000px;
+    height: 150px;
+    display: grid;
+    gap: 0.6rem;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr 3fr;
+    grid-template-areas:
+      "area-2 area-2 area-1 area-1 area-1 area-1 area-1 area-1 area-5 area-5 area-5 area-5"
+      "area-2 area-2 area-3 area-3 area-3 area-4 area-4 area-4 area-5 area-5 area-5 area-5";
+  }
+}
+
+@media screen and (max-width: 720px) {
+
+  .container,
+  .container-wid {
+    background-color: rgb(199, 220, 220);
+    margin: 2em auto;
+    width: 400px;
+    height: 450px;
+    display: grid;
+    gap: 0.6rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr 4fr;
+    grid-template-areas:
+    "area-1 area-1"
+      "area-2 area-3"
+      "area-2 area-4"
+      "area-5 area-5";
+  }
+
+  .container-sec {
+    background-color: rgb(199, 220, 220);
+    margin: 2em auto;
+    width: 400px;
+    /* height: 450px; */
+    display: grid;
+    gap: 0.6rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, minmax(200px, 1fr));
+    /* ojo porque cambiará mucho según los elementos */
+    grid-template-areas:
+      "area-sec-1"
+      "area-sec-2"
+      "area-sec-3"
+      "area-sec-4";
+  }
+
+  .area-sec-sep {
+    position: fixed;
+    visibility: hidden;
+  }
 }
